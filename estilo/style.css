@@ -1,0 +1,101 @@
+@charset "UFT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root { /* Criando os caminhos de fontes */
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif ;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* { /* Mexe nos espaçamentos de todos os elementos */
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+html, body {
+    min-width: 100%; /* O tamanho minimo do HTMl e body */ 
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 { /* Dentro do Header temos nosso H1 */ 
+    padding: 50px;
+    /*text-transform: uppercase;  Transforma todas as letras em Maiusculo, no caso usaremos a font-variant small-caps, deixa em maiusculo mas não tao chamativo */
+    font-variant: small-caps; /* Deixa Maiusculo, mas a primeira letra da palavra é maior */
+    font-family: var(--fonte2);
+    font-size: 10vw;
+}
+
+header > p { /* Dentro do Header tambem temos um paragrafo a ser tratado */
+    padding-bottom: 50px;
+}
+
+a { /* Trabalhando todos os links da pagina, caso queira somente o do cabeçario quanto do rodapé, **header a, footer a{** */
+    color: white;
+    text-decoration: none; /* removendo a decoração do link */
+    font-weight: bolder;
+}
+
+a:hover { /* Colocando o sublinhado ao passar o mouse por cima dos links, caso queira somente o cabecario e rodape, usar: **header a:hover, footer a:hover**  */
+    text-decoration: underline;
+}
+
+section { /* usar a section vai configurar tanto a da normal e imagem */
+    padding-top: 10vh; /*espaçamento no topo*/
+    padding-bottom: 10vh; /*espaçamento em baixo*/
+    line-height: 2em;
+    padding-left: 30px; /*espaçamento na esquerda*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p { /* Criando o espaçamento onde temos 2 paragrafos juntos e eles ficavam colados */
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: darkgray;
+    color: white;  
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.308);
+    background-attachment: fixed; /* Efeito Paralax - A imagem fica fixa */
+}
+
+section.imagem > p { /* Criar um fundo preto para as letras, para quando a imagem for, ficar legível */
+    display: inline-block; /* Deixa o quadrado ajustavel ao texto */
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.350);
+    text-shadow: 2px 2px 0px black;
+}
+
+section#img01 {
+background-image: url(../imagens/background001.jpg);
+background-position: right center;
+background-size: cover;
+}
+
+section#img02 {
+background-image: url(../imagens/background002.jpg); 
+background-size: cover;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
